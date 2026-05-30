@@ -183,7 +183,7 @@ if args.force:
 if args.folder:
     root_folder = args.folder
 else:
-    warn_root_folder = os.path.dirname(os.path.abspath(__file__))
+    warn_root_folder = os.getcwd()
     print(f"\n{YELLOW}[!]{RESET} Warning: No folder was set, thumbnails will be generated in {warn_root_folder} and all subdirectories.")
     confirmation = input("Are you sure you want to generate thumbnails? (Y/n): ")
     if confirmation.lower() != 'y':
